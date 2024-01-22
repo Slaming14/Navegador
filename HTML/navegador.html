@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegador</title>
+    <link rel="stylesheet" href="navegador.css">
+</head>
+<body>
+    <nav class="Contenedor-Navegador">
+        <h1>Slam</h1>
+        <ul id="Listas-Menus" class="Lista">
+            <li>Home</li>
+            <li>Collections</li>
+            <li>Products</li>
+            <li>Contact</li>
+        </ul>
+        <section class="Contenedor-Listas">
+            <span class="Menus-Hamburger">
+
+            </span>
+        </section>
+    </nav>
+
+    <script>
+        const ContenedorListas = document.querySelector('.Contenedor-Listas');
+        ContenedorListas.addEventListener('click',()=>{
+            const LsitasMenus = document.getElementById('Listas-Menus');
+            LsitasMenus.classList.toggle('active')
+            const MenusHamburger = document.querySelector('.Menus-Hamburger')
+            MenusHamburger.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
